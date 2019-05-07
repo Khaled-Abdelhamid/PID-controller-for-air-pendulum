@@ -1,0 +1,1 @@
+this data has been taking by copying the data of the serial monitor , which were written in CSV format so that it would be easy for matlab to import it as an array.
