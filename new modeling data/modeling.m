@@ -4,12 +4,6 @@ close all
 
 a=csvread('6.csv');
 
-%  figure 
-%  plot(a(:,2));
-% hold on
-%  plot(a(:,1));
-% figure
-
 ts = .01;  % this is the sampling time it is computed from the array t
 input=a(:,1);%input
 output=a(:,2); %output
@@ -24,7 +18,7 @@ g = tfest(data1,2,0);   % getting the transfer function and storing it in g
   
 % We found that the best approximation to the system is a system of the
 % fifth order
-transfer_fn = tf([g.Numerator],[g.Denominator])
+transfer_fn = tf([g.Numerator],[g.Denominator]);
 
 opt = stepDataOptions;
 opt.InputOffset = 1000;
